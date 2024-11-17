@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0846eb5c-9a1c-4cc4-b3f4-69286fe3f7e7\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"key_ad_banner\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"ca-app-pub-3940256099942544/6300978111\"\r\n    }\r\n  },\r\n  {\r\n   
+    \"metadata\": {\r\n      \"entityId\": \"0658714d-6fc0-41b1-a2b0-9d11cd9a398a\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"key_ad_interstitial\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"ca-app-pub-3940256099942544/1033173712\"\r\n   
+    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0846eb5c-9a1c-4cc4-b3f4-69286fe3f7e7\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"key_ad_banner\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"ca-app-pub-3940256099942544/6300978111\"\r\n    }\r\n  },\r\n  {\r\n   
+    \"metadata\": {\r\n      \"entityId\": \"0658714d-6fc0-41b1-a2b0-9d11cd9a398a\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"key_ad_interstitial\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"ca-app-pub-3940256099942544/1033173712\"\r\n   
+    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"12bec50f-f72b-4a2a-a4f0-d68304d90bfd\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"32e72f22-8bc1-4865-8a62-075010d19b27\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2024-11-09T17:09:55Z\",\r\n    \"updatedAt\":
+    \"2024-11-09T17:09:55Z\"\r\n  }\r\n]"
