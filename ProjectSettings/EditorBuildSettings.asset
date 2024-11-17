@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene 1.unity
     guid: f26e783bbd274a74fac223245b99d0af
+  - enabled: 1
+    path: Assets/Scenes/Ranking.unity
+    guid: ad5d03ea71b94eb49938d996d7b0ccdf
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: aeb406a5041e6154689b9b7a76ae6982, type: 2}
@@ -20,4 +23,3 @@ EditorBuildSettings:
       guid: da9f6f39658b6024096ef7d8af8467a6, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 83342fe474873684aa92a92164d7250a, type: 2}
-  m_UseUCBPForAssetBundles: 0

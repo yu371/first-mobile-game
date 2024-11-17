@@ -1,0 +1,1 @@
+C:\Users\dghcf\first-mobile-game\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\f3x3w1y2\obj\arm64-v8a

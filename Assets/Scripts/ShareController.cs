@@ -6,6 +6,7 @@ public class ShareController : MonoBehaviour
 {
     void Start()
     {
+
       
     }
     public void Share()
@@ -31,7 +32,7 @@ public class ShareController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // 投稿する
-        string tweetText = "sxrdcufvyg";
+        string tweetText = "あなたのスコアは"+ PlayerPrefs.GetInt("HighScore", 0);
         string tweetURL = "";
 
         try

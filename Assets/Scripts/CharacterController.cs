@@ -17,35 +17,55 @@ public class CharacterController : MonoBehaviour
     public GameObject Death;
     private bool true_false;
     private AudioSource audioSource;
+    private GameObject Score;
+    private GameObject ADS;
+    private InterstitialAdTest interstitialAdTest;
+    
     public void Game_start()
     {
      Destroy(button);
      Invoke("Start_switch_True",0.1f); 
+     interstitialAdTest.On_Off = true;
     }
+
+
     void Start_switch_True()
     {
        Start_switch = true;
     }
     void Start()
     {
+        
+        ADS = GameObject.FindWithTag("ADS");
+        interstitialAdTest =ADS.GetComponent<InterstitialAdTest>();
+        Score = GameObject.FindWithTag("score");
         audioSource = GetComponent<AudioSource>();
         Start_switch = false;
-        Time.timeScale = 2;
+        Time.timeScale = 1.5f;
         // Rigidbodyコンポーネントを取得
         rb = GetComponent<Rigidbody>();
         true_false = true;
-        Time.timeScale = 1f;
+         interstitialAdTest.loadInterstitialAd();
+         if(interstitialAdTest.On_Off == true)
+         {
+             int R = Random.Range(0,7);
+        if(R == 5)
+        {
+        ADS.GetComponent<InterstitialAdTest>().showInterstitialAd();
+        }
+        }
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
+      
         if(Start_switch == true)
         {
-        Time.timeScale += 0.01f * Time.deltaTime;
-        }
-        if(Start_switch == true)
-        {
+            if(Time.timeScale <= 3f)
+            {
+            Time.timeScale += 0.003f * Time.deltaTime;
+            }
               // タッチが検出された場合
         if (Input.touchCount > 0)
         {
@@ -86,7 +106,7 @@ public class CharacterController : MonoBehaviour
         // rb.velocity = new Vector3(rb.velocity.x,0f,1f);
         if(true_false == true)
         {
-               transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z+ 0.2f);
+               transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z+ 0.1f);
         }
         if(plus == true &&  minus == false)
         {
@@ -129,21 +149,12 @@ public class CharacterController : MonoBehaviour
         if(other.transform.tag == "wall")
         {
         true_false = false;
-       GameObject Score = GameObject.FindWithTag("score");
+      
        Score.GetComponent<Scoreboard>().GameFinish();
-    //    Score.GetComponent<InterstitialAdTest>().loadInterstitialAd();
-    //    Score.GetComponent<InterstitialAdTest>().showInterstitialAd();;
+
         gameObject.SetActive(false);
-        int R = Random.Range(0,5);
-        if(R == 1)
-        {
-            Invoke("LoadScene",0.5f);
-        }
-        else
-        {
-            Invoke("LoadScene",0.5f);
-        }
-        
+       
+        Invoke("LoadScene",0.5f);
         Instantiate(Death,transform.position, Quaternion.identity);
         }
         
